@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Plagiarism Checker</h1>
+        </div>
+    </header>
+    <div class="container result">
+        <h2>Plagiarism Result</h2>
+        <div class="donut-chart">
+            <img src="data:image/png;base64,{{ donut_chart }}" alt="Donut Chart">
+        </div>
+        <div class="percentage">
+            {{ percentage }}%
+        </div>
+        <a href="{{ url_for('index') }}">Check another pair of files</a>
+    </div>
+</body>
+</html>
